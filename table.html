@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num">
+    <button onclick="generateTable()">submit</button>
+    <div id="table"></div>
+    <script>
+        function generateTable() {
+            let num = document.getElementById("num").value;
+            let tableHtml = "";
+            for (let i = 1; i <= 10; i++) {
+                tableHtml += `${num} * ${i} = ${num * i}<br>`;
+            }
+            document.getElementById("table").innerHTML = tableHtml;
+        }
+    </script>
+
+    <!-- <script>
+    let n = 5;
+    for (let i = 1; i <= 10; i++)
+        document.write(n + " * " + i +
+            " = " + n * i +'<br>');
+        </script> -->
+</body>
+</html>
